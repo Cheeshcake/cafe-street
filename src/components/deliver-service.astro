@@ -1,0 +1,20 @@
+---
+import { services } from "../js/services";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 m-auto w-full py-10">
+  {
+    services.map((service) => (
+      <>
+      <div class="flex flex-col justify-center items-center ">
+        <img src={service.image} class="w-36"/>
+        <h3>{service.title}</h3>
+        <p>{service.description}</p>
+      </div>
+
+
+      </>
+    )
+  )
+  }
+</div>

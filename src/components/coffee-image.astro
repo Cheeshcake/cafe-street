@@ -10,8 +10,8 @@ interface Props {
 const { name = "default", rating = 4.8 ,price = 18} = Astro.props as Props;
 ---
 
-<div class="relative bg-brown rounded-full p-7 flex items-center justify-center w-fit">
-  <Image src={coffee} alt="Main Coffee Image" class="w-80" />
+<div class="relative bg-brown rounded-full p-7 flex items-center justify-center w-fit mt-10 md:mt-0">
+  <Image src={coffee} alt="Main Coffee Image" class="w-52 md:w-80" />
   <div class="glass-border absolute top-2 left-0 bg-white text-black text-2xl font-semibold px-5 py-1 rounded-full">
     {name}
   </div>
