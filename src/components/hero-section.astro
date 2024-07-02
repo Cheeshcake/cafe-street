@@ -1,0 +1,41 @@
+---
+import CardsGrid from "./cards-grid.astro";
+import CoffeeImage from "./coffee-image.astro";
+import ShoppingCart from "./shopping-cart.astro";
+---
+
+<div class="bg-light-yellow">
+  <div class=" w-full flex items-center justify-center py-20">
+    <div class="flex justify-between w-11/12">
+      <div class="left-section w-1/2 ml-16">
+        <h1>
+          Enjoy your <span class="text-orange">coffee</span>
+          <br />
+          before your activity
+        </h1>
+        <p class="text-light-gray mt-5">
+          Boost your productivity and build your<br />
+          mood with a glass of coffee in the morning
+        </p>
+        <div class="flex mt-5">
+          <button
+            class="font-semibold bg-brown text-white px-6 py-3 rounded-full flex items-center mr-10"
+          >
+            <span class="mr-3">Order now</span>
+            <ShoppingCart />
+          </button>
+          <button class="text-orange font-semibold">More menu</button>
+        </div>
+      </div>
+      <div class="right-section w-1/2 flex justify-center">
+        <CoffeeImage name="Cappuccino" rating={4.8} price={18} />
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col  w-3/4 justify-start m-auto">
+    <h2>
+      Popular <span class="underline decoration-orange">Now</span>
+    </h2>
+    <CardsGrid />
+  </div>
+</div>

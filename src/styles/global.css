@@ -7,7 +7,51 @@
 }
 
 
-li{
+/*Typography properties*/
+li {
   font-size: 18px;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+h2{
+  font-size: 32px;
+  font-weight: 600;
+}
+h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+}
+button {
+  font-size: 14px;
+}
+
+
+/*Small components*/
+.glass-border {
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+}
+
+.glass-border::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: inherit;
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.658) 12%,
+    rgba(255, 255, 255, 0.4) 77%
+  );
+  z-index: -1;
 }

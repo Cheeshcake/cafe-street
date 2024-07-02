@@ -1,0 +1,47 @@
+---
+import { coffees } from "../js/coffees";
+import ShoppingCart from "./shopping-cart.astro";
+import Star from "./star.astro";
+interface Props {
+  start?: number;
+  end?: number;
+}
+const { start = 0, end = 3 } = Astro.props as Props;
+---
+
+<div
+  class="cards-container grid grid-cols-1 md:grid-cols-3 gap-8 p-6 m-auto"
+>
+  {
+    coffees.slice(start, end).map((card) => (
+      <>
+        <div class="card-content glass-border relative flex flex-col rounded-xl  w-full p-5">
+          <div class="card-image relative">
+            <img src={card.image} class="w-full rounded-lg" />
+            <div class="glass-border top-5 left-5 absolute flex items-center rounded-full text-sm px-3 font-bold">
+              {card.rating}
+              <Star size={14} />
+            </div>
+          </div>
+          <div class="flex mt-5">
+            <div class="w-2/3">
+              <h3 class="mb-5">{card.name}</h3>
+              <div>
+                <button class="text-light-orange  border-light-orange hover:text-orange hover:border-orange px-3 py-1 rounded-xl font-semibold border-3">
+                  Hot
+                </button>
+                <button class="text-light-orange hover:text-orange hover:border-orange  border-light-orange px-3 py-1 rounded-xl font-semibold border-3">
+                  Cold
+                </button>
+              </div>
+            </div>
+            <div class="w-1/3 flex flex-col justify-center items-center">
+              <h3 class="mb-5">{card.price}k</h3>
+              <ShoppingCart size={30} />
+            </div>
+          </div>
+        </div>
+      </>
+    ))
+  }
+</div>

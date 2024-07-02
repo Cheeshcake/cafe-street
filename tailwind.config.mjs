@@ -6,16 +6,22 @@ export default {
       orange: "#FF902A",
       brown: "#2F2105",
       yellow: "#F9D9AA",
+      white: "#FFFFFF",
     },
     extend: {
       colors: {
-        'dark-gray': '#7E7D7A',
-        'light-gray': '#929292',
+        "light-orange":"#FFD28F",
+        "dark-gray": "#7E7D7A",
+        "light-gray": "#929292",
+        "light-yellow": "#F6EBDA",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      borderWidth: {
+        '3': '3px',
+      },
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };

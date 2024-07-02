@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import coffee from "../../public/assets/main-coffee.png";
+import Star from "./star.astro";
+interface Props {
+  name?: string;
+  rating?: number;
+  price?: number;
+}
+const { name = "default", rating = 4.8 ,price = 18} = Astro.props as Props;
+---
+
+<div class="relative bg-brown rounded-full p-7 flex items-center justify-center w-fit">
+  <Image src={coffee} alt="Main Coffee Image" class="w-80" />
+  <div class="glass-border absolute top-2 left-0 bg-white text-black text-2xl font-semibold px-5 py-1 rounded-full">
+    {name}
+  </div>
+  <div class="glass-border absolute top-20 right-0 bg-white text-black text-2xl font-semibold px-5 py-1 rounded-full flex items-center">
+    {rating}
+    <Star color="#FFD057" size={24}/>
+  </div>
+  <div class="glass-border absolute bottom-2 left-2 bg-white text-black text-2xl font-semibold px-5 py-1 rounded-full">
+    {price}K
+  </div>
+
+</div>

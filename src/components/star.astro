@@ -1,0 +1,11 @@
+---
+interface Props {
+  color?:string;
+  size?:number;
+
+}
+const {color = "#FFD057", size = 24} = Astro.props as Props;
+---
+<svg class="ml-1 text-yellow-500 " fill={color} viewBox="0 0 20 20" width={size} height={size}>
+  <path d="M9.049 2.927C9.36 2.073 10.64 2.073 10.951 2.927l1.464 4.511h4.743c.964 0 1.367 1.24.588 1.81l-3.838 2.791 1.464 4.511c.31.854-.755 1.561-1.539 1.06L10 14.722l-3.837 2.79c-.784.501-1.85-.206-1.539-1.06l1.464-4.511-3.838-2.791c-.779-.57-.376-1.81.588-1.81h4.743l1.464-4.511z" />
+</svg>
