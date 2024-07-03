@@ -1,12 +1,11 @@
 ---
 import CardsGrid from "./cards-grid.astro";
 import CoffeeImage from "./coffee-image.astro";
-import DeliverService from "./deliver-service.astro";
 import ShoppingCart from "./shopping-cart.astro";
 ---
 
-<div class="bg-light-yellow ">
-  <div class="  flex items-center justify-center py-10 md:py-20">
+<div class="bg-light-yellow">
+  <div class="flex items-center justify-center py-10 md:py-20">
     <div class="flex flex-col md:flex-row justify-between w-11/12">
       <div class="left-section w-full md:w-1/2 ml-0 md:ml-16">
         <h1>
@@ -33,16 +32,11 @@ import ShoppingCart from "./shopping-cart.astro";
       </div>
     </div>
   </div>
-  <div class="flex flex-col  w-3/4 justify-start m-auto">
+  <div class="flex flex-col w-3/4 justify-start m-auto">
     <h2>
       Popular <span class="underline decoration-orange">Now</span>
     </h2>
     <CardsGrid />
   </div>
 </div>
-<div class="flex flex-col  w-3/4 justify-start m-auto py-10">
-  <h2>
-    How to use delivery <span class="underline decoration-orange">service</span>
-  </h2>
-  <DeliverService/>
-</div>
+
