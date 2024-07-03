@@ -6,7 +6,6 @@
   font-family: "Poppins", "sans-serif";
 }
 
-
 /*Typography properties*/
 li {
   font-size: 18px;
@@ -69,5 +68,3 @@ button {
   );
   z-index: -1;
 }
-
-
