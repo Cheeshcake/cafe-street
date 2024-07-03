@@ -1,11 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import beans from "../../public/assets/beans.png";
 import CardsGrid from "./cards-grid.astro";
 import CoffeeImage from "./coffee-image.astro";
 import ShoppingCart from "./shopping-cart.astro";
 ---
 
-<div class="bg-light-yellow">
-  <div class="flex items-center justify-center py-10 md:py-20">
+<div class="bg-light-yellow relative">
+  <Image
+    src={beans}
+    alt="Top Right Beans Image"
+    class="right-beans absolute top-0 right-0 z-0"
+  />
+  <Image
+    src={beans}
+    alt="Bottom Left Beans Image"
+    class="left-beans absolute bottom-72 left-0 z-0"
+  />
+  <div class="relative flex items-center justify-center py-10 md:py-20 z-10">
     <div class="flex flex-col md:flex-row justify-between w-11/12">
       <div class="left-section w-full md:w-1/2 ml-0 md:ml-16">
         <h1>
@@ -19,12 +31,12 @@ import ShoppingCart from "./shopping-cart.astro";
         </p>
         <div class="flex mt-5">
           <button
-            class="font-semibold bg-brown text-white px-6 py-3 rounded-full flex items-center mr-10"
+            class="font-semibold bg-brown text-white hover:text-light-orange px-6 py-3 rounded-full flex items-center mr-10"
           >
             <span class="mr-3">Order now</span>
             <ShoppingCart />
           </button>
-          <button class="text-orange font-semibold">More menu</button>
+          <button class="text-orange hover:text-dark-orange font-semibold">More menu</button>
         </div>
       </div>
       <div class="right-section w-full md:w-1/2 flex justify-center">
@@ -32,10 +44,28 @@ import ShoppingCart from "./shopping-cart.astro";
       </div>
     </div>
   </div>
-  <div class="flex flex-col w-3/4 justify-start m-auto">
+  <div class="relative flex flex-col w-3/4 justify-start m-auto z-10">
     <h2>
       Popular <span class="underline decoration-orange">Now</span>
     </h2>
     <CardsGrid />
   </div>
 </div>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .right-beans,
+  .left-beans {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
