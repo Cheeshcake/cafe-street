@@ -10,7 +10,7 @@ export default {
     },
     extend: {
       colors: {
-        "light-orange":"#FFD28F",
+        "light-orange": "#FFD28F",
         "dark-orange": "#F4AE26",
         "dark-gray": "#7E7D7A",
         "light-gray": "#929292",
@@ -20,7 +20,10 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       borderWidth: {
-        '3': '3px',
+        3: "3px",
+      },
+      width: {
+        486: "486px",
       },
     },
   },

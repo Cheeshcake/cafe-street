@@ -1,16 +1,15 @@
 ---
 interface Props {
-  color?:string;
-  size?:number;
-
+  color?: string;
+  size?: number;
 }
-const {color = "white", size = 24} = Astro.props as Props;
+const { color = "white", size = 24 } = Astro.props as Props;
 ---
 
 <svg
   width={size}
   height={size}
-  class=" hover:cursor-pointer bg-orange rounded-full p-1"
+  class="hover:cursor-pointer bg-orange rounded-full p-1"
   aria-hidden="true"
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
